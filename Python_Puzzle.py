@@ -30,5 +30,9 @@ for i in range(0,len(tree), 2):
         if (i== 6):
             tree[i][j] = f"r{j+1}"
 
+# for branch in tree:
+#     print(branch)
+
+tree[0] = "      top       "
 for branch in tree:
     print(branch)
