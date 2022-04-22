@@ -1,0 +1,97 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+   
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 4px;
+
+    grid-template-areas: 
+    "red red red red"
+    "green blue blue blue"
+    "green blue blue blue"
+    "green blue blue blue"
+    "green blue blue blue"
+    ". . purple purple"
+    "pink pink pink pink"
+    "pink pink pink pink"
+    "pink pink pink pink"
+    "orange orange orange orange";
+}
+
+.grid > div {
+   display: flex;
+    gap: 4px;
+
+}
+
+.cel {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+
+
+ .red {
+    grid-area: red;
+
+}
+
+.red .cel {
+    background-color: rgb(251, 99, 99);
+}
+
+.green {
+    grid-area:green;
+    flex-direction: column;
+}
+
+.green .cel {
+    
+    background-color: rgb(147, 197, 147);
+}
+
+.blue {
+    grid-area: blue;
+    flex-wrap: wrap;
+
+}
+
+.blue > .cel {
+    background-color: rgb(103, 164, 255);
+    width: calc(300px/3);
+    height: calc(200px/4);   
+}
+
+.purple {
+    grid-area: purple;
+}
+
+.purple .cel {
+    background-color: rgb(174, 145, 204);
+}
+
+.pink {
+    grid-area: pink;
+}
+
+.pink .cel {
+    background-color: rgb(235, 175, 185);
+}
+
+.orange {
+    grid-area: orange;
+}
+
+.orange .cel {
+    background-color: rgb(255, 192, 140);
+}
